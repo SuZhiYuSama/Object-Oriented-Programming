@@ -1,17 +1,16 @@
 #include<iostream>
+#include<cmath>
 using namespace std;
-typedef class stu
-{
-public:
-	char name;
-private:
-	int num;
-};
+float distance(float x) {
+	return x;
+}
+float distance(float x, float y) {
+	return sqrt(x * x + y * y);
+}
+float distance(float x, float y, float z) {
+	return sqrt(x * x + y * y + z * z);
+}
 int main() {
-	stu *student1 = new stu;
-	stu* students = new stu[10];
-	cout << "对象创建完毕！" << endl;
-	delete student1;
-	delete students;
+	cout << distance(1.5, -1.5) << " " << distance(1, 1, 1) << endl;
 	return 0;
 }

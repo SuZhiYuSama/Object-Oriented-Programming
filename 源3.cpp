@@ -1,16 +1,14 @@
 #include<iostream>
 using namespace std;
+long jiecheng(long n);
 int main() {
-	int i = 10, sum = 0;
-/*	while (i) {
-		sum += i;
-		i--;
-	}
-	do {
-		sum += i;
-		i--;
-	} while (i);*/
-	for (i = 1; i <= 10; i++)sum += i;
-	cout << i << endl;
+	long x;
+	cin >> x;
+	cout << jiecheng(x) << endl;
 	return 0;
+}
+long jiecheng(long n) {
+	if (n == 0 || n == 1)return 1;
+	else return jiecheng(n - 1) * n;
+	return jiecheng(n);
 }
